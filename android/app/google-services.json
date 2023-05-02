@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "183986639944",
+    "project_id": "mymedic-e1823",
+    "storage_bucket": "mymedic-e1823.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:183986639944:android:1c93ddd71ee2e781de347d",
+        "android_client_info": {
+          "package_name": "com.example.application1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "183986639944-q05ehgi6lnfn302apljif53h5llfbotl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRvc9SHTxDu276yV-gpABEWc5YWulydgY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "183986639944-q05ehgi6lnfn302apljif53h5llfbotl.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "183986639944-frq28mb6tk2hk1ttbbdmiufq4o5b3ll6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.application1"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
