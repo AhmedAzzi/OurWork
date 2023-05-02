@@ -1,14 +1,14 @@
-import 'package:MyMedice/src/common_widgets/form/form_header_widget.dart';
-import 'package:MyMedice/src/constants/icon_string.dart';
-import 'package:MyMedice/src/constants/image_strings.dart';
-import 'package:MyMedice/src/constants/sizes.dart';
-import 'package:MyMedice/src/constants/text_strings.dart';
-import 'package:MyMedice/src/authentication/controllers/login_controller.dart';
-import 'package:MyMedice/src/authentication/screens/SignUp/signup_screen.dart';
+import 'package:my_medics/src/common_widgets/form/form_header_widget.dart';
+import 'package:my_medics/src/constants/icon_string.dart';
+import 'package:my_medics/src/constants/image_strings.dart';
+import 'package:my_medics/src/constants/sizes.dart';
+import 'package:my_medics/src/constants/text_strings.dart';
+import 'package:my_medics/src/authentication/controllers/login_controller.dart';
+import 'package:my_medics/src/authentication/screens/SignUp/signup_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:MyMedice/src/constants/colors.dart';
-import 'package:MyMedice/src/authentication/screens/forget_password/forget_password_options/forget_password_modele_bottom_sheet.dart';
+import 'package:my_medics/src/constants/colors.dart';
+import 'package:my_medics/src/authentication/screens/forget_password/forget_password_options/forget_password_modele_bottom_sheet.dart';
 import 'package:email_validator/email_validator.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -19,8 +19,6 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-
-
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(LoginController());
@@ -66,13 +64,13 @@ class _LoginFormState extends State<LoginForm> {
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(LoginController());
-    final _formKey = GlobalKey<FormState>();
+    final formKey = GlobalKey<FormState>();
     var mediaQuery = MediaQuery.of(context);
     var brightness = mediaQuery.platformBrightness;
     final isDarkMode = brightness == Brightness.dark;
 
     return Form(
-        key: _formKey,
+        key: formKey,
         child: Container(
           padding: const EdgeInsets.symmetric(vertical: tFormHeight - 10),
           child: Column(
@@ -190,7 +188,7 @@ class LoginFooterWidget extends StatelessWidget {
             },
             child: Text.rich(TextSpan(
                 text: tDontHaveAnAccount,
-                style: Theme.of(context).textTheme.bodyText1,
+                style: Theme.of(context).textTheme.bodyLarge,
                 // ignore: prefer_const_literals_to_create_immutables
                 children: [
                   const TextSpan(

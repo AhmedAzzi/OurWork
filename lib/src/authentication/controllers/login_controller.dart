@@ -1,4 +1,4 @@
-import 'package:MyMedice/src/repository/authentication_repository/authentification_repository.dart';
+import 'package:my_medics/src/repository/authentication_repository/authentification_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

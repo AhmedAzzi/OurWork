@@ -1,11 +1,11 @@
-import 'package:MyMedice/src/authentication/screens/login/login_screen.dart';
-import 'package:MyMedice/src/common_widgets/form/form_header_widget.dart';
-import 'package:MyMedice/src/constants/colors.dart';
-import 'package:MyMedice/src/constants/icon_string.dart';
-import 'package:MyMedice/src/constants/image_strings.dart';
-import 'package:MyMedice/src/constants/sizes.dart';
-import 'package:MyMedice/src/constants/text_strings.dart';
-import 'package:MyMedice/src/authentication/controllers/Singnup_controller.dart';
+import 'package:my_medics/src/authentication/screens/login/login_screen.dart';
+import 'package:my_medics/src/common_widgets/form/form_header_widget.dart';
+import 'package:my_medics/src/constants/colors.dart';
+import 'package:my_medics/src/constants/icon_string.dart';
+import 'package:my_medics/src/constants/image_strings.dart';
+import 'package:my_medics/src/constants/sizes.dart';
+import 'package:my_medics/src/constants/text_strings.dart';
+import 'package:my_medics/src/authentication/controllers/singnup_controller.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -18,7 +18,6 @@ class SingnUpScreen extends StatefulWidget {
 }
 
 class _SingnUpScreenState extends State<SingnUpScreen> {
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -221,7 +220,7 @@ class SignUpFooterWidget extends StatelessWidget {
             },
             child: Text.rich(TextSpan(
                 text: tAlreadyHaveAnAccount,
-                style: Theme.of(context).textTheme.bodyText1,
+                style: Theme.of(context).textTheme.bodyLarge,
                 // ignore: prefer_const_literals_to_create_immutables
                 children: [
                   const TextSpan(

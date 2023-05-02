@@ -1,6 +1,6 @@
-import 'package:MyMedice/src/authentication/screens/on_boarding/on_boarding_screen.dart';
-import 'package:MyMedice/src/repository/authentication_repository/authentification_repository.dart';
-import 'package:MyMedice/src/utils/theme/them.dart';
+import 'package:my_medics/src/authentication/screens/on_boarding/on_boarding_screen.dart';
+import 'package:my_medics/src/repository/authentication_repository/authentification_repository.dart';
+import 'package:my_medics/src/utils/theme/them.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';

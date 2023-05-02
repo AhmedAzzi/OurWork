@@ -1,9 +1,10 @@
 import 'dart:io';
-import 'package:MyMedice/src/constants/colors.dart';
-import 'package:MyMedice/src/constants/image_strings.dart';
-import 'package:MyMedice/src/constants/sizes.dart';
-import 'package:MyMedice/src/constants/text_strings.dart';
+import 'package:my_medics/src/constants/colors.dart';
+import 'package:my_medics/src/constants/image_strings.dart';
+import 'package:my_medics/src/constants/sizes.dart';
+import 'package:my_medics/src/constants/text_strings.dart';
 import 'package:email_validator/email_validator.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
@@ -28,7 +29,8 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
         leading: IconButton(
             onPressed: () => Get.back(),
             icon: const Icon(LineAwesomeIcons.angle_left)),
-        title: Text(tEditProfile, style: Theme.of(context).textTheme.headline4),
+        title: Text(tEditProfile,
+            style: Theme.of(context).textTheme.headlineMedium),
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -187,13 +189,13 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
           return Dialog(
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20.0)), //this right here
-            child: Container(
+            child: SizedBox(
               height: 150,
               child: Padding(
                 padding: const EdgeInsets.all(12.0),
                 child: Column(
                   children: [
-                    Text(
+                    const Text(
                       'Select Image From !',
                       style: TextStyle(
                           fontSize: 18.0, fontWeight: FontWeight.bold),
@@ -204,14 +206,18 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
                         GestureDetector(
                           onTap: () async {
                             selectedImagePath = await selectImageFromGallery();
-                            print('Image_Path:-');
-                            print(selectedImagePath);
+                            if (kDebugMode) {
+                              print('Image_Path:-');
+                            }
+                            if (kDebugMode) {
+                              print(selectedImagePath);
+                            }
                             if (selectedImagePath != '') {
                               Navigator.pop(context);
                               setState(() {});
                             } else {
                               ScaffoldMessenger.of(context)
-                                  .showSnackBar(SnackBar(
+                                  .showSnackBar(const SnackBar(
                                 content: Text("No Image Selected !"),
                               ));
                             }

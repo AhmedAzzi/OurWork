@@ -1,5 +1,5 @@
-import 'package:MyMedice/src/authentication/screens/Welcome/welcome_screen.dart';
-import 'package:MyMedice/src/repository/authentication_repository/authentification_repository.dart';
+import 'package:my_medics/src/authentication/screens/Welcome/welcome_screen.dart';
+import 'package:my_medics/src/repository/authentication_repository/authentification_repository.dart';
 import 'package:get/get.dart';
 
 class LogoutController extends GetxController {
@@ -7,6 +7,6 @@ class LogoutController extends GetxController {
 
   void logout() {
     AuthenticationRepository.instance.logout();
-    Get.off(WelcomeScreen());
+    Get.off(const WelcomeScreen());
   }
 }

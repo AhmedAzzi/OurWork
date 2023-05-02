@@ -1,8 +1,8 @@
-import 'package:MyMedice/src/constants/colors.dart';
-import 'package:MyMedice/src/constants/sizes.dart';
-import 'package:MyMedice/src/constants/text_strings.dart';
-import 'package:MyMedice/src/authentication/controllers/Singnup_controller.dart';
-import 'package:MyMedice/src/authentication/models/user_model.dart';
+import 'package:my_medics/src/constants/colors.dart';
+import 'package:my_medics/src/constants/sizes.dart';
+import 'package:my_medics/src/constants/text_strings.dart';
+import 'package:my_medics/src/authentication/controllers/singnup_controller.dart';
+import 'package:my_medics/src/authentication/models/user_model.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

@@ -1,8 +1,8 @@
-import 'package:MyMedice/src/constants/sizes.dart';
-import 'package:MyMedice/src/constants/text_strings.dart';
-import 'package:MyMedice/src/authentication/screens/forget_password/forget_password_mail/forget_password_mail.dart';
-import 'package:MyMedice/src/authentication/screens/forget_password/forget_password_options/forget_password_btn_widget.dart';
-import 'package:MyMedice/src/authentication/screens/forget_password/forget_password_phone/forget_password_phone.dart';
+import 'package:my_medics/src/constants/sizes.dart';
+import 'package:my_medics/src/constants/text_strings.dart';
+import 'package:my_medics/src/authentication/screens/forget_password/forget_password_mail/forget_password_mail.dart';
+import 'package:my_medics/src/authentication/screens/forget_password/forget_password_options/forget_password_btn_widget.dart';
+import 'package:my_medics/src/authentication/screens/forget_password/forget_password_phone/forget_password_phone.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -19,10 +19,10 @@ class ForgetPasswordScreen {
                 children: [
                   Text(
                     tForgetPassword,
-                    style: Theme.of(context).textTheme.headline3,
+                    style: Theme.of(context).textTheme.displaySmall,
                   ),
                   Text(tForgetPasswordSubTitle,
-                      style: Theme.of(context).textTheme.bodyText2),
+                      style: Theme.of(context).textTheme.bodyMedium),
                   const SizedBox(
                     height: 30,
                   ),
@@ -30,7 +30,7 @@ class ForgetPasswordScreen {
                     btnIcon: Icons.mail_outline_rounded,
                     onTap: () {
                       Navigator.pop(context);
-                      Get.to(() =>  ForgetPasswordMailScreen());
+                      Get.to(() => ForgetPasswordMailScreen());
                     },
                     subtitle: tResetViaEMail,
                     title: tEmail,

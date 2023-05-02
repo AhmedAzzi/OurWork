@@ -1,26 +1,23 @@
-import 'package:MyMedice/src/constants/image_strings.dart';
-import 'package:MyMedice/src/constants/sizes.dart';
-import 'package:MyMedice/src/constants/text_strings.dart';
-import 'package:MyMedice/src/search/models/state_servies.dart';
+import 'package:my_medics/src/constants/image_strings.dart';
+import 'package:my_medics/src/constants/sizes.dart';
+import 'package:my_medics/src/constants/text_strings.dart';
+import 'package:my_medics/src/search/models/state_servies.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
 
-// ignore: must_be_immutable
 class SearchPage extends StatefulWidget {
-  SearchPage({
-    Key? key,
-  });
+  const SearchPage({Key? key}) : super(key: key);
 
   @override
-  _SearchPageState createState() => _SearchPageState();
+  State<SearchPage> createState() => _SearchPageState();
 }
 
 class _SearchPageState extends State<SearchPage> {
   String? medicelSelected;
-  
+
   bool isSelected = false;
   int q = 8;
-  TextEditingController? _textEditingController = TextEditingController();
+  final TextEditingController _textEditingController = TextEditingController();
 
 // *----------------------------------------------------
   // * function for filter our liste
@@ -29,11 +26,6 @@ class _SearchPageState extends State<SearchPage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        drawer: const Drawer(),
-        appBar: AppBar(
-          title: const Text(tSearch),
-          centerTitle: true,
-        ),
         body: Padding(
           padding:
               const EdgeInsets.only(top: 50, bottom: 16, right: 16, left: 16),
@@ -69,7 +61,7 @@ class _SearchPageState extends State<SearchPage> {
                           color: Colors.blue,
                         ),
                         // ignore: unnecessary_const
-                        const Text(tNo_results_founds,
+                        const Text(tNoResultsFounds,
                             // ignore: unnecessary_const
                             style: const TextStyle(
                                 color: Colors.black,
@@ -93,9 +85,9 @@ class _SearchPageState extends State<SearchPage> {
                         suffixIcon: IconButton(
                             onPressed: () {
                               //itemsInSearch.clear();
-                              _textEditingController!.clear();
+                              _textEditingController.clear();
                               setState(() {
-                                _textEditingController!.text = '';
+                                _textEditingController.text = '';
                               });
                             },
                             icon: Icon(

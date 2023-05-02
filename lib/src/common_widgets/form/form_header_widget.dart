@@ -29,9 +29,9 @@ class FormHeaderWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Lottie.asset(image, height: size.height * 0.2),
-        Text(title, style: Theme.of(context).textTheme.headline1),
+        Text(title, style: Theme.of(context).textTheme.displayLarge),
         Text(subTitle,
-            textAlign: textAlign, style: Theme.of(context).textTheme.bodyText1),
+            textAlign: textAlign, style: Theme.of(context).textTheme.bodyLarge),
       ],
     );
   }

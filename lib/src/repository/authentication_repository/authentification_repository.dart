@@ -1,7 +1,7 @@
-
-import 'package:MyMedice/src/core/screens/navigat.dart';
-import 'package:MyMedice/src/repository/authentication_repository/exceptions/signup_email_password_failure.dart';
+import 'package:my_medics/src/core/screens/navigat.dart';
+import 'package:my_medics/src/repository/authentication_repository/exceptions/signup_email_password_failure.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -33,14 +33,18 @@ class AuthenticationRepository extends GetxController {
       //* hna fi halat password kan fible wela account deja kyn aya ysra katch
     } on FirebaseAuthException catch (e) {
       final ex = SignUpWithEmailAndPasswordFailure.code(e.code);
-      print('FIREBASE AUTH EXCEPTION - ${ex.message}');
+      if (kDebugMode) {
+        print('FIREBASE AUTH EXCEPTION - ${ex.message}');
+      }
       Get.snackbar('Error', ex.message,
           snackPosition: SnackPosition.BOTTOM,
           backgroundColor: Colors.red.withOpacity(0.1),
           colorText: Colors.red);
     } catch (_) {
       const ex = SignUpWithEmailAndPasswordFailure();
-      print('FIREBASE AUTH EXCEPTION - ${ex.message}');
+      if (kDebugMode) {
+        print('FIREBASE AUTH EXCEPTION - ${ex.message}');
+      }
       Get.snackbar('Error', ex.message,
           snackPosition: SnackPosition.BOTTOM,
           backgroundColor: Colors.red.withOpacity(0.1),
@@ -64,7 +68,7 @@ class AuthenticationRepository extends GetxController {
       Get.offAll(() => const Dachboard());
 
       //* hna fi halat kan password wela email khati2  wela user ga3 makanch fe database  aya ysra catch
-    } on FirebaseAuthException catch (e) {
+    } on FirebaseAuthException {
       Get.snackbar('Error', 'Wrong Password or Email',
           snackPosition: SnackPosition.BOTTOM,
           backgroundColor: Colors.red.withOpacity(0.1),

@@ -11,7 +11,6 @@ class Notifications extends StatelessWidget {
         title: const Text('Notifications'),
         centerTitle: true,
       ),
-      drawer: const Drawer(),
     ));
   }
 }

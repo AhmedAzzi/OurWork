@@ -34,7 +34,6 @@ class MedicelModel extends StatelessWidget {
         onPressed: () {},
       ),
     );
-    ;
   }
 }
 

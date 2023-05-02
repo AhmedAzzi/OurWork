@@ -1,9 +1,9 @@
-import 'package:MyMedice/src/common_widgets/form/form_header_widget.dart';
-import 'package:MyMedice/src/constants/colors.dart';
-import 'package:MyMedice/src/constants/image_strings.dart';
-import 'package:MyMedice/src/constants/sizes.dart';
-import 'package:MyMedice/src/constants/text_strings.dart';
-import 'package:MyMedice/src/authentication/controllers/foget_password_email_controller.dart';
+import 'package:my_medics/src/common_widgets/form/form_header_widget.dart';
+import 'package:my_medics/src/constants/colors.dart';
+import 'package:my_medics/src/constants/image_strings.dart';
+import 'package:my_medics/src/constants/sizes.dart';
+import 'package:my_medics/src/constants/text_strings.dart';
+import 'package:my_medics/src/authentication/controllers/foget_password_email_controller.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -39,7 +39,7 @@ class ForgetPasswordMailScreen extends StatelessWidget {
                       TextFormField(
                         autovalidateMode: AutovalidateMode.onUserInteraction,
                         validator: (email) =>
-                            email != null && EmailValidator.validate(email)
+                            email != null && !EmailValidator.validate(email)
                                 ? 'Enter a valid Email'
                                 : null,
                         cursorColor: tSecondaryColor,

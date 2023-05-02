@@ -1,5 +1,5 @@
-import 'package:MyMedice/src/constants/colors.dart';
-import 'package:MyMedice/src/constants/sizes.dart';
+import 'package:my_medics/src/constants/colors.dart';
+import 'package:my_medics/src/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
 class ForgetPasswordBtnWidget extends StatelessWidget {
@@ -48,7 +48,7 @@ class ForgetPasswordBtnWidget extends StatelessWidget {
                     color: isDarkMode ? tWhiteColor : tDarkColor,
                   ),
                 ),
-                Text(subtitle, style: Theme.of(context).textTheme.bodyText2),
+                Text(subtitle, style: Theme.of(context).textTheme.bodyMedium),
               ],
             )
           ],

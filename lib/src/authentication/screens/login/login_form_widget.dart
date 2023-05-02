@@ -1,8 +1,8 @@
-import 'package:MyMedice/src/constants/colors.dart';
-import 'package:MyMedice/src/constants/sizes.dart';
-import 'package:MyMedice/src/constants/text_strings.dart';
-import 'package:MyMedice/src/authentication/controllers/login_controller.dart';
-import 'package:MyMedice/src/authentication/screens/forget_password/forget_password_options/forget_password_modele_bottom_sheet.dart';
+import 'package:my_medics/src/constants/colors.dart';
+import 'package:my_medics/src/constants/sizes.dart';
+import 'package:my_medics/src/constants/text_strings.dart';
+import 'package:my_medics/src/authentication/controllers/login_controller.dart';
+import 'package:my_medics/src/authentication/screens/forget_password/forget_password_options/forget_password_modele_bottom_sheet.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -23,13 +23,13 @@ class _LoginFormState extends State<LoginForm> {
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(LoginController());
-    final _formKey = GlobalKey<FormState>();
+    final formKey = GlobalKey<FormState>();
     var mediaQuery = MediaQuery.of(context);
     var brightness = mediaQuery.platformBrightness;
     final isDarkMode = brightness == Brightness.dark;
 
     return Form(
-        key: _formKey,
+        key: formKey,
         child: Container(
           padding: const EdgeInsets.symmetric(vertical: tFormHeight - 10),
           child: Column(

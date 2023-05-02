@@ -1,4 +1,4 @@
-i Firebase web app MyMedice (web) registered.
+i Firebase web app my_medics (web) registered.
 
 Firebase configuration file lib\firebase_options.dart generated successfully with the following Firebase apps:
 

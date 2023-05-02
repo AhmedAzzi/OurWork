@@ -1,8 +1,8 @@
-import 'package:MyMedice/src/constants/image_strings.dart';
-import 'package:MyMedice/src/constants/sizes.dart';
-import 'package:MyMedice/src/constants/text_strings.dart';
-import 'package:MyMedice/src/authentication/screens/SignUp/signup_screen.dart';
-import 'package:MyMedice/src/authentication/screens/login/login_screen.dart';
+import 'package:my_medics/src/constants/image_strings.dart';
+import 'package:my_medics/src/constants/sizes.dart';
+import 'package:my_medics/src/constants/text_strings.dart';
+import 'package:my_medics/src/authentication/screens/SignUp/signup_screen.dart';
+import 'package:my_medics/src/authentication/screens/login/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
@@ -15,7 +15,6 @@ class WelcomeScreen extends StatefulWidget {
 }
 
 class _WelcomeScreenState extends State<WelcomeScreen> {
-
   @override
   Widget build(BuildContext context) {
     var mediaQuery = MediaQuery.of(context);
@@ -33,9 +32,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 Column(
                   children: [
                     Text(tWelcomeTitle,
-                        style: Theme.of(context).textTheme.headline3),
+                        style: Theme.of(context).textTheme.displaySmall),
                     Text(tWelcomeSubTitle,
-                        style: Theme.of(context).textTheme.bodyText1,
+                        style: Theme.of(context).textTheme.bodyLarge,
                         textAlign: TextAlign.center),
                   ],
                 ),

@@ -1,6 +1,5 @@
-
-import 'package:MyMedice/src/core/screens/navigat.dart';
-import 'package:MyMedice/src/repository/authentication_repository/authentification_repository.dart';
+import 'package:my_medics/src/core/screens/navigat.dart';
+import 'package:my_medics/src/repository/authentication_repository/authentification_repository.dart';
 import 'package:get/get.dart';
 
 class OTPController extends GetxController {

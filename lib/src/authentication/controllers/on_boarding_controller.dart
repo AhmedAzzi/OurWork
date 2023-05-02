@@ -1,11 +1,11 @@
-import 'package:MyMedice/src/constants/colors.dart';
-import 'package:MyMedice/src/authentication/screens/Welcome/welcome_screen.dart';
+import 'package:my_medics/src/constants/colors.dart';
+import 'package:my_medics/src/authentication/screens/Welcome/welcome_screen.dart';
 import 'package:get/get.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
-import 'package:MyMedice/src/constants/image_strings.dart';
-import 'package:MyMedice/src/constants/text_strings.dart';
-import 'package:MyMedice/src/authentication/models/model_on_boarding.dart';
-import 'package:MyMedice/src/authentication/screens/on_boarding/on_boarding_page_wiget.dart';
+import 'package:my_medics/src/constants/image_strings.dart';
+import 'package:my_medics/src/constants/text_strings.dart';
+import 'package:my_medics/src/authentication/models/model_on_boarding.dart';
+import 'package:my_medics/src/authentication/screens/on_boarding/on_boarding_page_wiget.dart';
 
 class OnBoardingController extends GetxController {
   final controller = LiquidController();
@@ -42,7 +42,7 @@ class OnBoardingController extends GetxController {
   onPageChangedCallback(int activePageIndex) =>
       currentPage.value = activePageIndex;
   skip() => controller.jumpToPage(page: 2);
-  NextSlide() {
+  nextSlide() {
     int nextpage = controller.currentPage + 1;
     controller.animateToPage(page: nextpage);
   }

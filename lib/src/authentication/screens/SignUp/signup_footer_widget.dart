@@ -1,7 +1,7 @@
-import 'package:MyMedice/src/constants/icon_string.dart';
-import 'package:MyMedice/src/constants/sizes.dart';
-import 'package:MyMedice/src/constants/text_strings.dart';
-import 'package:MyMedice/src/authentication/screens/login/login_screen.dart';
+import 'package:my_medics/src/constants/icon_string.dart';
+import 'package:my_medics/src/constants/sizes.dart';
+import 'package:my_medics/src/constants/text_strings.dart';
+import 'package:my_medics/src/authentication/screens/login/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -22,8 +22,8 @@ class SignUpFooterWidget extends StatelessWidget {
         SizedBox(
             width: double.infinity,
             child: OutlinedButton.icon(
-                icon: Image(
-                  image: const AssetImage(tGoogleLogoImage),
+                icon: const Image(
+                  image: AssetImage(tGoogleLogoImage),
                   width: 20.0,
                 ),
                 onPressed: () {},
@@ -38,7 +38,7 @@ class SignUpFooterWidget extends StatelessWidget {
             },
             child: Text.rich(TextSpan(
                 text: tAlreadyHaveAnAccount,
-                style: Theme.of(context).textTheme.bodyText1,
+                style: Theme.of(context).textTheme.bodyLarge,
                 // ignore: prefer_const_literals_to_create_immutables
                 children: [
                   const TextSpan(

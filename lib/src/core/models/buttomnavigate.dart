@@ -2,26 +2,26 @@ import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
 class TBottomNavigationBar extends StatelessWidget {
-  TBottomNavigationBar({super.key, required this.onChanged});
+  TBottomNavigationBar({super.key, this.onChanged});
 
   void Function(int)? onChanged;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
-          color: Colors.blue, borderRadius: BorderRadius.circular(20)),
+      // decoration: BoxDecoration(
+      //     color: Colors.blue, borderRadius: BorderRadius.circular(20)),
       padding: const EdgeInsets.symmetric(horizontal: 6.0, vertical: 6.0),
       child: GNav(
           onTabChange: onChanged,
-          backgroundColor: Colors.blue,
+          // backgroundColor: Colors.blue,
           tabBackgroundColor: Colors.grey.shade800,
           color: Colors.white,
           activeColor: Colors.white,
           padding: const EdgeInsets.all(16),
           tabs: [
-            GButton(
-              backgroundColor: Colors.blue[400],
+            const GButton(
+              // backgroundColor: Colors.blue[400],
               gap: 8,
               icon: Icons.home,
               text: 'Home',
@@ -47,10 +47,3 @@ class TBottomNavigationBar extends StatelessWidget {
     );
   }
 }
-
-
-/**
- * setState(() {
-                    index = i;
-                  });
- */

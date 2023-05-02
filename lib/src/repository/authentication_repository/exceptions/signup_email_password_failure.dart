@@ -1,4 +1,4 @@
-import 'package:MyMedice/src/constants/text_strings.dart';
+import 'package:my_medics/src/constants/text_strings.dart';
 
 class SignUpWithEmailAndPasswordFailure {
   final String message;
@@ -8,19 +8,19 @@ class SignUpWithEmailAndPasswordFailure {
 
   factory SignUpWithEmailAndPasswordFailure.code(String code) {
     switch (code) {
-      case tweak_password:
+      case tweakPassword:
         return const SignUpWithEmailAndPasswordFailure(
             'Please Enter a Stronger Password.');
-      case tinvalid_email:
+      case tinvalidEmail:
         return const SignUpWithEmailAndPasswordFailure(
             'Email is not valid or badly Fromatted.');
-      case temail_already_in_use:
+      case temailAlreadyUsed:
         return const SignUpWithEmailAndPasswordFailure(
             'An account already exists for that email.');
-      case toperation_not_allowed:
+      case toperationNotAllowed:
         return const SignUpWithEmailAndPasswordFailure(
             'Operation is not Allowed.Please contact support.');
-      case tuser_disabled:
+      case tuserDisabled:
         return const SignUpWithEmailAndPasswordFailure(
             'This User has been disabled.Please contact support for help.');
       default:

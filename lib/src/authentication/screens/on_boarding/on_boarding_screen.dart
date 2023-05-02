@@ -1,4 +1,4 @@
-import 'package:MyMedice/src/authentication/controllers/on_boarding_controller.dart';
+import 'package:my_medics/src/authentication/controllers/on_boarding_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
@@ -44,7 +44,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                         style: TextStyle(color: Colors.grey)),
                   )
                 : TextButton(
-                    onPressed: () => obController.NextSlide(),
+                    onPressed: () => obController.nextSlide(),
                     child: const Text("Next",
                         style: TextStyle(color: Colors.grey)),
                   ),

@@ -1,5 +1,5 @@
-import 'package:MyMedice/src/constants/sizes.dart';
-import 'package:MyMedice/src/authentication/models/model_on_boarding.dart';
+import 'package:my_medics/src/constants/sizes.dart';
+import 'package:my_medics/src/authentication/models/model_on_boarding.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
@@ -25,7 +25,7 @@ class OnBoardingPageWidget extends StatelessWidget {
             children: [
               Text(
                 model.title,
-                style: Theme.of(context).textTheme.headline3,
+                style: Theme.of(context).textTheme.displaySmall,
               ),
               Text(
                 model.subTitle,
@@ -35,7 +35,7 @@ class OnBoardingPageWidget extends StatelessWidget {
           ),
           Text(
             model.counterText,
-            style: Theme.of(context).textTheme.headline6,
+            style: Theme.of(context).textTheme.titleLarge,
           ),
           const SizedBox(
             height: 80.0,

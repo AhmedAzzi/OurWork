@@ -1,5 +1,5 @@
-import 'package:MyMedice/src/authentication/models/user_model.dart';
-import 'package:MyMedice/src/core/screens/navigat.dart';
+import 'package:my_medics/src/authentication/models/user_model.dart';
+import 'package:my_medics/src/core/screens/navigat.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -22,7 +22,7 @@ class UserRepository extends GetxController {
           snackPosition: SnackPosition.BOTTOM,
           backgroundColor: Colors.redAccent.withOpacity(0.1),
           colorText: Colors.red);
-      print(error.toString());
+      return error;
     });
   }
   //* Step 2 -Fetch Users Or user details

@@ -1,4 +1,4 @@
-import 'package:MyMedice/src/constants/colors.dart';
+import 'package:my_medics/src/constants/colors.dart';
 
 import 'package:flutter/material.dart';
 

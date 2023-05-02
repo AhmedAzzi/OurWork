@@ -11,7 +11,6 @@ class Settings extends StatelessWidget {
         title: const Text('Settings'),
         centerTitle: true,
       ),
-      drawer: const Drawer(),
     ));
   }
 }

@@ -1,20 +1,21 @@
-import 'package:MyMedice/src/constants/colors.dart';
-import 'package:MyMedice/src/constants/image_strings.dart';
-import 'package:MyMedice/src/constants/sizes.dart';
-import 'package:MyMedice/src/constants/text_strings.dart';
-import 'package:MyMedice/src/authentication/controllers/logout_controller.dart';
-import 'package:MyMedice/src/core/screens/Drawer/settings.dart';
-import 'package:MyMedice/src/profile/models/profile_menu.dart';
-import 'package:MyMedice/src/profile/screens/uptade_profile_screen.dart';
+import 'package:my_medics/src/constants/colors.dart';
+import 'package:my_medics/src/constants/image_strings.dart';
+import 'package:my_medics/src/constants/sizes.dart';
+import 'package:my_medics/src/constants/text_strings.dart';
+import 'package:my_medics/src/authentication/controllers/logout_controller.dart';
+import 'package:my_medics/src/core/screens/Drawer/settings.dart';
+import 'package:my_medics/src/profile/models/profile_menu.dart';
+import 'package:my_medics/src/profile/screens/uptade_profile_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
 
 class Profile extends StatefulWidget {
+  const Profile({super.key});
+
   @override
-  // ignore: library_private_types_in_public_api
-  _ProfileState createState() => _ProfileState();
+  State<Profile> createState() => _ProfileState();
 }
 
 class _ProfileState extends State<Profile> {
@@ -25,15 +26,6 @@ class _ProfileState extends State<Profile> {
   Widget build(BuildContext context) {
     var isDark = MediaQuery.of(context).platformBrightness == Brightness.dark;
     return Scaffold(
-      drawer: const Drawer(),
-      appBar: AppBar(
-        title: Text(tProfile, style: Theme.of(context).textTheme.headline4),
-        actions: [
-          IconButton(
-              onPressed: () {},
-              icon: Icon(isDark ? LineAwesomeIcons.moon : LineAwesomeIcons.sun))
-        ],
-      ),
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.all(tDefaultSize),
@@ -73,9 +65,9 @@ class _ProfileState extends State<Profile> {
               ),
               const SizedBox(height: 10),
               Text(tProfileHeading,
-                  style: Theme.of(context).textTheme.headline4),
+                  style: Theme.of(context).textTheme.headlineMedium),
               Text(user!.email.toString(),
-                  style: Theme.of(context).textTheme.bodyText2),
+                  style: Theme.of(context).textTheme.bodyMedium),
               const SizedBox(height: 20),
 
               /// -- BUTTON
@@ -100,7 +92,7 @@ class _ProfileState extends State<Profile> {
                   title: "Settings",
                   icon: LineAwesomeIcons.cog,
                   onPress: () {
-                    Get.to(() => Settings());
+                    Get.to(() => const Settings());
                   }),
               ProfileMenuWidget(
                   title: "Notes",

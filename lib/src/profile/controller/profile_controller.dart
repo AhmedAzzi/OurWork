@@ -1,5 +1,5 @@
-import 'package:MyMedice/src/repository/authentication_repository/authentification_repository.dart';
-import 'package:MyMedice/src/repository/user_repository/user_repository.dart';
+import 'package:my_medics/src/repository/authentication_repository/authentification_repository.dart';
+import 'package:my_medics/src/repository/user_repository/user_repository.dart';
 import 'package:get/get.dart';
 
 class ProfileController extends GetxController {
@@ -7,7 +7,7 @@ class ProfileController extends GetxController {
   final _authRepo = Get.put(AuthenticationRepository());
   final _userRepo = Get.put(UserRepository());
   //* Step 3 Get User Eamil and pass to UserRepository to fetch user record
- /* getUserData() {
+  /* getUserData() {
     final email = _authRepo.firebaseUser.value?.email;
     if (email != null) {
       return _userRepo.getUserDetails(email);

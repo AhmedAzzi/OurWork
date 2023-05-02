@@ -1,6 +1,6 @@
-import 'package:MyMedice/src/constants/sizes.dart';
-import 'package:MyMedice/src/constants/text_strings.dart';
-import 'package:MyMedice/src/authentication/controllers/otp_controller.dart';
+import 'package:my_medics/src/constants/sizes.dart';
+import 'package:my_medics/src/constants/text_strings.dart';
+import 'package:my_medics/src/authentication/controllers/otp_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
@@ -14,7 +14,7 @@ class OTPScreen extends StatelessWidget {
     var otpcontroller = Get.put(OTPController());
     var mediaQuery = MediaQuery.of(context);
     var height = mediaQuery.size.height;
-    var otp;
+    String otp = "";
     return Scaffold(
       body: Container(
         padding: const EdgeInsets.all(tDefaultSize),
@@ -28,7 +28,7 @@ class OTPScreen extends StatelessWidget {
                   fontWeight: FontWeight.bold, fontSize: 80.0),
             ),
             Text(tOtpSubTitle.toUpperCase(),
-                style: Theme.of(context).textTheme.headline6),
+                style: Theme.of(context).textTheme.titleLarge),
             const SizedBox(height: 40.0),
             const Text("$tOtpMessage user!.email.toString()",
                 textAlign: TextAlign.center),
